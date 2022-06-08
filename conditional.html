@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        height: 200px;
+        width: 200px;
+        border: 1px solid red;
+    }
+</style>
+</head>
+<body>
+
+    <!-- <form action=""> -->
+        <label for="">Age</label>
+        <input  type="text" name="" id="inp">
+        <button type="submit" onclick="eligible()">Click Here</button>
+        <!-- </form> -->
+        <div id="main"></div>
+
+<script>
+
+function eligible(){
+    var output="eligible";
+    var inp = document.getElementById("inp").value;
+  
+    if(inp>=18 && inp<=30)
+    {
+         document.getElementById("main").innerHTML = "eligible";
+       document.getElementById("inp").value= " ";
+    
+       
+    }
+    else{
+        document.write("not eligible");
+    }
+
+}
+
+
+</script>
+
+<!-- <script>
+    var age = parseInt(prompt("enter your age"));
+    if(age>=18){
+        document.write("you are eligible");
+    }
+    else{
+        document.write("please enter age greater than or equal to 18")
+    }
+</script> -->
+    
+</body>
+</html>

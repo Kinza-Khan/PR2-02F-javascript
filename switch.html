@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <!-- <input type="text" name="" id="inp"> -->
+    <!-- <button type="submit" onclick="fun()">Submit</button> -->
+    <label for="">Physics</label>&nbsp;&nbsp;
+<input type="number" name="" id="phy">  
+<br>
+<br> 
+<label for="">Chemis</label>&nbsp;
+<input type="number" name="" id="chem">  
+<br>
+<br>  
+<label for="">Maths</label>&nbsp;&nbsp;
+<input type="number" name="" id="math">  
+<br>
+<br>  
+<label for="">Urdu :</label>&nbsp;&nbsp;
+<input type="number" name="" id="urdu">  
+<br>
+<br>  
+<label for="">English</label>
+<input type="number" name="" id="eng">  
+<br>
+<br>  
+<button type="submit" onclick="fun()">Submit</button> 
+<div id="demo"></div>
+   
+
+   
+    
+
+    <script>
+        function fun(){
+
+
+    var p= parseInt(document.getElementById("phy").value);
+    var c= parseInt(document.getElementById("chem").value);
+    var m= parseInt(document.getElementById("math").value);
+    var u= parseInt(document.getElementById("urdu").value);
+    var e= parseInt(document.getElementById("eng").value);
+    var total = (p+c+m+u+e);
+    var per = (total/500)*100
+
+//  var inp = document.getElementById("inp").value;
+// switch (true) {
+//     case(inp%2 == 0):
+//     document.write("Your number is even");
+        
+//         break;
+       
+
+//     default: document.write("your number is odd")
+//         break;
+// }
+// switch (true) {
+//     case 'manager':
+//         document.write("your salary is 150000");
+        
+//         break;
+//         case 'employee':
+//         document.write("your salary is 50000");
+//         break;
+//         case 'doctor':
+//         document.write("your salary is 200000");
+//         break;
+//     default:
+//         document.write("Your designation is not match in our program");
+// }
+switch (true) {
+    case (per>=80):
+        document.write("A+");
+        
+        break;
+        case (per>=70):
+        document.write("A");
+        
+        break;
+        case (per>=60):
+        document.write("B");
+        
+        break;
+        case (per>=50):
+        document.write("C");
+        
+        break;
+
+    default:
+    document.write("Fail");
+       
+}
+
+
+
+
+        }
+
+    </script>
+</body>
+</html>

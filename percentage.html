@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+<label for="">Physics</label>&nbsp;&nbsp;
+<input type="number" name="" id="phy">  
+<br>
+<br> 
+<label for="">Chemis</label>&nbsp;
+<input type="number" name="" id="chem">  
+<br>
+<br>  
+<label for="">Maths</label>&nbsp;&nbsp;
+<input type="number" name="" id="math">  
+<br>
+<br>  
+<label for="">Urdu :</label>&nbsp;&nbsp;
+<input type="number" name="" id="urdu">  
+<br>
+<br>  
+<label for="">English</label>
+<input type="number" name="" id="eng">  
+<br>
+<br>  
+<button type="submit" onclick="result()">Submit</button> 
+<div id="demo"></div>
+    <script>
+function result() {
+    var p= parseInt(document.getElementById("phy").value);
+    var c= parseInt(document.getElementById("chem").value);
+    var m= parseInt(document.getElementById("math").value);
+    var u= parseInt(document.getElementById("urdu").value);
+    var e= parseInt(document.getElementById("eng").value);
+    var total = (p+c+m+u+e);
+    var per = (total/500)*100
+    
+
+if(per>=80 ){
+    document.getElementById("demo").innerHTML="physics marks = "+ p +
+    "<br> chemistry marks = "+ c+ " <br> maths marks = "+m+ "<br> urdu marks = " +u+"<br> english marks = " + e +"<br> Obtain marks = "+ total+"<br> percentage = "+ per+"<br> Your Grade is A+ ";
+   
+}
+else if(per>=70 && per<80){
+    document.getElementById("demo").innerHTML="physics marks = "+ p +
+    "<br> chemistry marks = "+ c+ " <br> maths marks = "+m+ "<br> urdu marks = " +u+"<br> english marks = " + e +"<br> Obtain marks = "+ total+"<br> percentage = "+ per+"<br> Your Grade is A ";
+}
+else if(per>=60 && per<70){
+    document.getElementById("demo").innerHTML="physics marks = "+ p +
+    "<br> chemistry marks = "+ c+ " <br> maths marks = "+m+ "<br> urdu marks = " +u+"<br> english marks = " + e +"<br> Obtain marks = "+ total+"<br> percentage = "+ per+"<br> Your Grade is B ";
+}
+   
+else if(per>=50 && per<60){
+    document.getElementById("demo").innerHTML="physics marks = "+ p +
+    "<br> chemistry marks = "+ c+ " <br> maths marks = "+m+ "<br> urdu marks = " +u+"<br> english marks = " + e +"<br> Obtain marks = "+ total+"<br> percentage = "+ per+"<br> Your Grade is C ";
+}
+else{
+    document.getElementById("demo").innerHTML="physics marks = "+ p +
+    "<br> chemistry marks = "+ c+ " <br> maths marks = "+m+ "<br> urdu marks = " +u+"<br> english marks = " + e +"<br> Obtain marks = "+ total+"<br> percentage = "+ per+"<br> Sorry u do have do hard work u are fail ";
+
+}
+   
+    // document.write(total + typeof(total))
+}
+
+        
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested If</title>
+</head>
+<body>
+    <label for="">User Name</label>
+    <input type="text" name="" id="uname">
+    <br>
+    <br>
+    <label for="">Password</label>
+    <input type="text" name="" id="pass">
+    <br>
+    <br>
+    <button type="submit" onclick="subm()">Submit</button>
+    <script>
+function subm(){
+   var u_name= document.getElementById("uname").value;
+   var u_pass= document.getElementById("pass").value;
+    if(u_name!="" && u_pass!=""){
+        if(u_name=="admin" && u_pass==123){
+            document.write("successfully login");
+        }
+        else{
+            document.write("login failed");
+            
+        }
+    }
+    else{
+        document.write("sorry");
+    }
+
+}
+    </script>
+</body>
+</html>

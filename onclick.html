@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text" id="name">
+    <label for="">age</label>
+    <input type="text" name="" id="age">
+    <button type="submit" onclick="fun()" >submit</button>
+    <div id="demo"></div>
+    <script>
+        function fun(){
+            var name= document.getElementById("name").value;
+            var age= document.getElementById("age").value;
+if(name=="admin" && age==22){
+
+     document.getElementById("demo").innerHTML= "successfully login";
+    document.getElementById("name").value= " ";
+     document.getElementById("age").value= " ";
+}
+else{
+     document.getElementById("name").value= " ";
+     document.getElementById("age").value= " ";
+    document.getElementById("demo").innerHTML= "login failed";
+    
+
+}
+        }
+    
+
+
+
+    </script>
+    <br>
+    <br>
+    <label for="">Value</label>
+    <input type="text" name="" id="val">
+    <button onclick="sq()">square</button>
+    <script>
+function sq() {
+    var val= document.getElementById("val").value;
+document.getElementById("main").innerHTML= val*val;
+document.getElementById("val").value="";
+}
+
+
+    </script>
+    <div id="main"></div>
+</body>
+</html>
