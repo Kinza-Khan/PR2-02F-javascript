@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<label for="">User  Name</label>
+<input type="text" name="" id="uname">
+<input type="submit" onclick="store()" name="" id="">
+<br><input type="submit" onclick="reset()" value="reset" name="" id="">
+<br>
+<br>
+<div id="demo"></div>
+
+    <script>
+
+function store() {
+
+    if(("localStorage" in window)&&["localStorage"]!==null){
+        var uname= document.getElementById("uname").value;
+        localStorage.setItem("username",uname);
+        document.getElementById("demo").innerHTML=localStorage.getItem("username");
+
+    }
+    else{
+        document.write("your browser does not support local storage");
+    }
+    
+}
+function reset(){
+
+if(('localStorage' in window)&&['localStorage']!==null){
+localStorage.removeItem('username');
+
+}
+else{
+    document.write("your browser doesnot support local storage");
+}
+
+}
+
+
+
+    </script>
+    
+</body>
+</html>
